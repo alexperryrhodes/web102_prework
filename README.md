@@ -17,7 +17,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [x] Updated CSS to improve the 
+* [x] Updated CSS and HTML by adding a background image and changing fonts, colors and margins. 
 
 ## Video Walkthrough
 
