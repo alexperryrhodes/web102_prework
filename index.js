@@ -45,7 +45,11 @@ function addGamesToPage(games) {
         // between the end of the src attribute and the end of the tag ("/>")
         const display = `
             <img src=${game.img} alt="Image of Game" class="game-img" />
-            <p>${game.name} has ${game.backers} backers</p>`
+            <h3>${game.name}</h3>
+            <p>${game.description}</p>
+            <p>Backers: ${game.backers.toLocaleString('en-US')}</p>
+            <p>Raised $${game.pledged.toLocaleString('en-US')}</p> 
+            <p>Goal: $${game.goal.toLocaleString('en-US')}</p>`
         div.innerHTML = display;
 
         // append the game to the games-container
