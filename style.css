@@ -1,8 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+:root {
+    --background: #7aa4ab;
+    --header: #8eb8c2; 
+    --accent: #416270;
+  }
+
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: var(--background);
+    background-image: url("assets/ocean1.jpg");
+}
+
+p {
+    font-size: larger;
+}
+
+h2 {
+    font-size: x-large;
 }
 
 #tentacles {
@@ -11,7 +26,8 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: var(--header);
+    background: rgba(142,184,194,0.6);
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -19,23 +35,24 @@ body {
     margin-top: -10px;
 }
 
-.stats-container {
-    display: flex;
-    align-items: flex-start;
+.main {
+    margin: 10px 60px;
+    
 }
 
-.stats-container:hover {
-    box-shadow: 0 0 30px lightblue;
-    cursor: pointer;
+.stats-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: var(--accent);
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+    color: white;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -63,13 +80,13 @@ body {
     border-radius: 7px;
 }
 
-.game-card:hover {
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
-}
-
 #button-container {
     text-align: center;
+}
+
+.stats-card:hover, .game-card:hover, #unfunded-btn:hover, #funded-btn:hover, #all-btn:hover {
+    box-shadow: 0 0 30px var(--header);
+    cursor: pointer;
 }
 
 button {
@@ -78,4 +95,11 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    font-size: large;
+    background-color: var(--accent);
+    color: white;
+}
+
+footer {
+    text-align: center;
 }
